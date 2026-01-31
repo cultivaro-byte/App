@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grow Box Control Panel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">Control Panel</div>
+          <p>Manage your grow box</p>
+        </div>
+        <nav class="menu">
+          <button class="menu-item active">
+            <span class="dot"></span>
+            Overview
+          </button>
+          <button class="menu-item">
+            <span class="dot"></span>
+            Lighting
+          </button>
+          <button class="menu-item">
+            <span class="dot"></span>
+            Watering
+          </button>
+          <button class="menu-item">
+            <span class="dot"></span>
+            Temperature
+          </button>
+          <button class="menu-item">
+            <span class="dot"></span>
+            Ventilation
+          </button>
+          <button class="menu-item">
+            <span class="dot"></span>
+            Camera
+          </button>
+          <button class="menu-item">
+            <span class="dot"></span>
+            Community
+          </button>
+          <button class="menu-item">
+            <span class="dot"></span>
+            Presets
+          </button>
+          <button class="menu-item">
+            <span class="dot"></span>
+            Settings
+          </button>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <div class="pill">Box Nr. 1</div>
+          <div class="brand">GL</div>
+          <button class="icon-button">☰</button>
+        </header>
+
+        <section class="cards">
+          <article class="grow-card active">
+            <div class="card-header">
+              <div>
+                <h2>Box Nr. 1</h2>
+                <p>Basil</p>
+              </div>
+              <button class="ghost">Tap for details</button>
+            </div>
+            <div class="plant-image"></div>
+            <div class="card-footer">
+              <span>Day 42</span>
+              <span>Vegetative Stage</span>
+              <span>18h</span>
+              <span>26.0°C</span>
+              <span>65.0%</span>
+            </div>
+          </article>
+
+          <article class="grow-card muted">
+            <div class="card-header">
+              <div>
+                <h2>Box Nr. 2</h2>
+                <p>Mint</p>
+              </div>
+            </div>
+            <div class="plant-image alt"></div>
+            <div class="card-footer">
+              <span>Day 28</span>
+              <span>Flowering Stage</span>
+              <span>12h</span>
+              <span>24.2°C</span>
+              <span>58.0%</span>
+            </div>
+          </article>
+        </section>
+
+        <div class="pagination">
+          <span></span>
+          <span class="active"></span>
+          <span></span>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
