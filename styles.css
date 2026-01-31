@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+:root {
+  color-scheme: dark;
+  font-family: "Inter", sans-serif;
+  background-color: #1b1e21;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #2b2f34, #15171a 65%);
+  color: #f5f6f8;
+}
+
+.app {
+  width: min(1200px, 95vw);
+  height: min(520px, 90vh);
+  background: #111820;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+}
+
+.sidebar {
+  background: linear-gradient(180deg, #182233 0%, #101924 100%);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.sidebar-header .logo {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.sidebar-header p {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 6px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-item {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.menu-item .dot {
+  width: 8px;
+  height: 8px;
+  background: currentColor;
+  border-radius: 50%;
+  opacity: 0.75;
+}
+
+.menu-item.active {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.content {
+  background: radial-gradient(circle at top left, rgba(14, 141, 83, 0.85), #00321f 70%);
+  padding: 28px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pill {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.25);
+  font-size: 0.8rem;
+}
+
+.brand {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.icon-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  cursor: pointer;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: center;
+  flex: 1;
+}
+
+.grow-card {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  padding: 20px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  backdrop-filter: blur(8px);
+}
+
+.grow-card.muted {
+  opacity: 0.35;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-header h2 {
+  font-size: 1rem;
+}
+
+.card-header p {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ghost {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 0.7rem;
+  color: #f8f8f8;
+}
+
+.plant-image {
+  flex: 1;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05)),
+    radial-gradient(circle at 50% 20%, #3cb54a, #0d4f2b 55%, #092b17 80%);
+  box-shadow: inset 0 -45px 60px rgba(0, 0, 0, 0.35);
+}
+
+.plant-image.alt {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05)),
+    radial-gradient(circle at 40% 30%, #7bd689, #196c3c 55%, #0a3b21 80%);
+}
+
+.card-footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.75);
+  gap: 6px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pagination span {
+  width: 12px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+}
+
+.pagination span.active {
+  background: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .app {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
